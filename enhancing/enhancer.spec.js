@@ -5,13 +5,22 @@ describe("the enhancer", () => {
   describe("the repair function", () => {
     it("should restore the durability", () => {
       // arrange
-      const longsword = {};
+      const weapon1 = {
+        name: "longsword",
+        durability: 50,
+        enhancement: 10
+      };
 
+      const expected = {
+        name: "longsword",
+        durability: 100,
+        enhancement: 10
+      };
       // act
-      const result = enhancer.repair(longsword);
+      const repairedItem = enhancer.repair(weapon1);
 
       // assert
-      expect(result).toBe(100);
+      expect(repairedItem).toEqual(expected);
     });
   });
 });
