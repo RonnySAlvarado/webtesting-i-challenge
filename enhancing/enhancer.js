@@ -8,9 +8,8 @@ module.exports = {
 function succeed(item) {
   if (item.enhancement < 20) {
     item.enhancement += 1;
-    console.log(item);
-    return item;
   }
+  return item;
 }
 
 function fail(item) {
@@ -22,7 +21,6 @@ function fail(item) {
   if (item.enhancement > 16) {
     item.enhancement -= 1;
   }
-  console.log(item);
   return item;
 }
 
